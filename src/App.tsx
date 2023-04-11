@@ -3,9 +3,8 @@ import { themeSettings } from "./theme";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
-import Home from "@/components/Home";
-import About from "@/components/About";
 import Navbar from "@/scenes/navbar";
+import Dashboard from "@/scenes/dashboard";
 const App = () => {
   const theme = useMemo(() => createTheme(themeSettings), []);
   return (
@@ -15,8 +14,8 @@ const App = () => {
         <Box width="100%" height="100%" padding="1rem 2rem 4rem 2rem">
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/predictions" element={<div>Predictions</div>} />
           </Routes>
         </Box>
       </ThemeProvider>
